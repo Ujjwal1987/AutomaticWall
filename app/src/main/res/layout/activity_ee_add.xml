@@ -1,0 +1,73 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/Electrical_E1"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 1"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E2"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 2"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E3"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 3"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E4"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 4"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E5"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 5"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E6"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 6"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E7"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 7"></EditText>
+
+        <EditText
+            android:id="@+id/Electrical_E8"
+            android:layout_width="280dip"
+            android:layout_height="60dip"
+            android:text="Electrical Equipment 8"></EditText>
+
+        <Button
+            android:id="@+id/submit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Electrical_E8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:text="Submit" />
+
+
+    </LinearLayout>
+</ScrollView>

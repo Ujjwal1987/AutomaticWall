@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_room_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chase.automaticwall.RoomAdd">
+
+    <EditText
+        android:id="@+id/Rname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Room Name" />
+
+    <EditText
+        android:id="@+id/RIPaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Rname"
+        android:layout_alignStart="@+id/Rname"
+        android:layout_below="@+id/Rname"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:text="Room IP Address" />
+
+    <Button
+        android:id="@+id/submit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RIPaddress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="Submit" />
+</RelativeLayout>

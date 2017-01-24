@@ -1,0 +1,42 @@
+package com.example.chase.automaticwall;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    public Button add_new_room, control_lights;
+
+    public void init() {
+        add_new_room = (Button) findViewById(R.id.add_new_room);
+        add_new_room.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, RoomAdd.class);
+                startActivity(i);
+
+            }
+        });
+        control_lights = (Button) findViewById(R.id.control_lights);
+        control_lights.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent k = new Intent(MainActivity.this, ControlLights.class);
+                startActivity(k);
+            }
+        });
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        init();
+    }
+}
