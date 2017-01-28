@@ -29,6 +29,11 @@ public class RoomListAdapter extends BaseAdapter {
         return mRoomList.size();
     }
 
+//    @Override
+//    public boolean isEnabled(int position) {
+//        return false;
+//    }
+
     @Override
     public Object getItem(int position) {
         return mRoomList.get(position);
