@@ -3,6 +3,7 @@ package com.example.chase.automaticwall;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, RoomAdd.class);
                 startActivity(i);
 
+
             }
         });
         control_lights = (Button) findViewById(R.id.control_lights);
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent k = new Intent(MainActivity.this, ControlLights.class);
                 startActivity(k);
+
             }
         });
     }
@@ -38,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

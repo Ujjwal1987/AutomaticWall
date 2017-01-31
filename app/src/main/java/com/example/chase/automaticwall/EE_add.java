@@ -3,6 +3,7 @@ package com.example.chase.automaticwall;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -105,6 +106,7 @@ public class EE_add extends AppCompatActivity {
                 }
                 Intent l = new Intent(EE_add.this, MainActivity.class);
                 startActivity(l);
+                finish();
             }
         });
 
@@ -116,5 +118,13 @@ public class EE_add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ee_add);
         save_EE();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
