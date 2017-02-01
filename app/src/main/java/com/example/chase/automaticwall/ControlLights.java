@@ -172,9 +172,6 @@ public class ControlLights extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         switch (item.getItemId()) {
-            case R.id.Edit:
-                return true;
-
 
             case R.id.Delete:
                 filedel(info.position);
