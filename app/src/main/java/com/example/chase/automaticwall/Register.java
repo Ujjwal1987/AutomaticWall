@@ -54,8 +54,8 @@ public class Register extends AppCompatActivity {
                     NewRegister reg = new NewRegister();
                     try {
                         String temp = reg.execute(data, "a", "b").get();
-                        Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
-                        Intent p = new Intent(Register.this, MainActivity.class);
+                        Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_LONG).show();
+                        Intent p = new Intent(Register.this, Login.class);
                         startActivity(p);
                         finish();
                     } catch (InterruptedException e) {
@@ -97,6 +97,7 @@ public class Register extends AppCompatActivity {
                     OutputStreamWriter ws = new OutputStreamWriter(conn.getOutputStream());
                     ws.write(params[0]);
                     ws.flush();
+                    ws.close();
 
                     BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     StringBuilder sb = new StringBuilder();
@@ -116,6 +117,7 @@ public class Register extends AppCompatActivity {
                 e.printStackTrace();
             }
 
+//            return null;
             return "success";
         }
     }

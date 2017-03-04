@@ -47,14 +47,14 @@ public class Login extends AppCompatActivity {
                 Webconnection wc = new Webconnection();
                 try {
                     String temp = wc.execute(data, "a", "b").get();
-                    Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
+///                    Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
                     String[] temp1 = temp.split(":");
-                    temp = temp.substring(0, 1);
-                    Toast.makeText(getApplicationContext(), temp1[1], Toast.LENGTH_LONG).show();
+//                    temp = temp.substring(0, 1);
+//                    Toast.makeText(getApplicationContext(), temp1[1], Toast.LENGTH_LONG).show();
 
 //                    int i = Integer.parseInt(temp);
 //                    Toast.makeText(getApplicationContext(), String.valueOf(i), Toast.LENGTH_LONG).show();
-                    if (temp.equals("1")) {
+                    if (temp.startsWith("1")) {
                         Intent p = new Intent(Login.this, MainActivity.class);
                         p.putExtra("username", username);
                         p.putExtra("UID", temp1[1]);
