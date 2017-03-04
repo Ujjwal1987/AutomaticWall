@@ -23,7 +23,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Login extends AppCompatActivity {
 
-    public Button id_login, id_register, id_offline;
+    public Button id_login, id_register;
     public EditText id_username, id_password;
 
     public void main() {
@@ -48,11 +48,16 @@ public class Login extends AppCompatActivity {
                 try {
                     String temp = wc.execute(data, "a", "b").get();
                     Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
+                    String[] temp1 = temp.split(":");
                     temp = temp.substring(0, 1);
-                    int i = Integer.parseInt(temp);
-                    Toast.makeText(getApplicationContext(), String.valueOf(i), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), temp1[1], Toast.LENGTH_LONG).show();
+
+//                    int i = Integer.parseInt(temp);
+//                    Toast.makeText(getApplicationContext(), String.valueOf(i), Toast.LENGTH_LONG).show();
                     if (temp.equals("1")) {
                         Intent p = new Intent(Login.this, MainActivity.class);
+                        p.putExtra("username", username);
+                        p.putExtra("UID", temp1[1]);
                         startActivity(p);
                         finish();
                     } else {
@@ -90,7 +95,7 @@ public class Login extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String text = null;
             try {
-                URL url = new URL("http://192.168.1.2/AutomaticWallApp/index.php");
+                URL url = new URL("http://ec2-35-154-124-161.ap-south-1.compute.amazonaws.com/AutomaticWallApp/index.php");
                 try {
 //                    Toast.makeText(getApplicationContext(), params[0], Toast.LENGTH_LONG).show();
                     //                  Toast.makeText(getApplicationContext(), params[1], Toast.LENGTH_LONG).show();
