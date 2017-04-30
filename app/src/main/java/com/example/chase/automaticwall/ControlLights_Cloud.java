@@ -200,7 +200,7 @@ public class ControlLights_Cloud extends AppCompatActivity {
         String data1 = "/c/" + username + ":" + UID;
 
 
-        String IPaddress = "ec2-35-154-124-161.ap-south-1.compute.amazonaws.com";
+        String IPaddress = "ec2-35-154-154-71.ap-south-1.compute.amazonaws.com";
         Sendmsg SM = new Sendmsg();
         SM.execute(IPaddress, data1);
 

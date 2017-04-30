@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
                 Webconnection wc = new Webconnection();
                 try {
                     String temp = wc.execute(data, "a", "b").get();
-///                    Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(), temp, Toast.LENGTH_LONG).show();
                     String[] temp1 = temp.split(":");
 //                    temp = temp.substring(0, 1);
 //                    Toast.makeText(getApplicationContext(), temp1[1], Toast.LENGTH_LONG).show();
@@ -95,7 +95,7 @@ public class Login extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String text = null;
             try {
-                URL url = new URL("http://ec2-35-154-124-161.ap-south-1.compute.amazonaws.com/AutomaticWallApp/index.php");
+                URL url = new URL("http://ec2-35-154-154-71.ap-south-1.compute.amazonaws.com/AutomaticWallApp/index.php");
                 try {
 //                    Toast.makeText(getApplicationContext(), params[0], Toast.LENGTH_LONG).show();
                     //                  Toast.makeText(getApplicationContext(), params[1], Toast.LENGTH_LONG).show();

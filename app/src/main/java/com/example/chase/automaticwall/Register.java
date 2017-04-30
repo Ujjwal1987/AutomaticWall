@@ -83,7 +83,7 @@ public class Register extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String text = null;
             try {
-                URL url = new URL("http://ec2-35-154-124-161.ap-south-1.compute.amazonaws.com/AutomaticWallApp/register.php");
+                URL url = new URL("http://ec2-35-154-154-71.ap-south-1.compute.amazonaws.com/AutomaticWallApp/register.php");
                 try {
 //                    Toast.makeText(getApplicationContext(), params[0], Toast.LENGTH_LONG).show();
                     //                  Toast.makeText(getApplicationContext(), params[1], Toast.LENGTH_LONG).show();
